@@ -1,0 +1,69 @@
+@import '../../../index.scss';
+@import '../../../sass/mixins';
+
+
+.noteBookDetails {
+  .container {
+    .content {
+      .detailsList {
+        box-shadow: $shadow-17;
+        @include borderRadius(4px);
+        padding: 4px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        .listItem {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          background-color: $gray-100;
+          @include borderRadius(4px);
+          &:nth-child(even) {
+            background-color: $gray-200;
+          }
+          .title {
+            padding: 8px;
+            color: $gray-700;
+            font-weight: 600;
+            font-size: 18px;
+            width: 150px;
+            border-inline-end: 3px solid $white;
+          }
+          .value {
+            padding: 8px;
+            color: $gray-343a40;
+          }
+          .serialAssig,
+          .serialNotAssig {
+            color: $white;
+            width: fit-content;
+            padding: 4px 12px;
+            @include borderRadius(4px);
+          }
+          .serialAssig {
+            background-color: $bg-green;
+          }
+          .serialNotAssig {
+            background-color: $bg-red;
+          }
+        }
+      }
+      .contracts {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        .title {
+          font-size: 20px;
+          font-weight: 600;
+          color: $blue-0c;
+          margin-bottom: 16px;
+        }
+        .contractList {
+          .item {
+
+          }
+        }
+      }
+      
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import '../../../index.scss';
+@import '../../../sass/mixins';
+
+
+.filterTable {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    @media (max-width: $lg-media) {
+        // align-items: flex-start;
+        // flex-direction: column;
+    }
+    .icon {
+        @include transition(0.2s);
+        cursor: pointer;
+        svg {
+        }
+        &:hover {
+            color: $yellow-F4;
+        }
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        @media (max-width: $lg-media) {
+            // flex-direction: column;
+            // justify-content: flex-start;
+            // align-items: flex-start;
+        }
+        input {
+            width: 100%;
+            
+            color: $white;
+            &::placeholder {
+                font-size: 14px;
+            }
+        }
+        .id,
+        .serial,
+        .fromDate,
+        .toDate {
+            @include borderRadius(4px 4px 0px 0px);
+            padding: 4px;
+            background-color: rgb(51, 65, 85, 1);
+            opacity: 1;
+            color: $white;
+            border-bottom: 1px solid #777;
+        }
+        .id {
+            width: 100px;
+            border-bottom: 1px solid #777;
+        }
+        .serial {
+            width: 130px;
+            border-bottom: 1px solid #777;
+        }
+        .fromDate,
+        .toDate {
+            width: 170px;
+            @include transition(0.2s);
+            cursor: pointer;
+            position: relative;
+            overflow: auto;
+            // background: #000;
+            // svg {
+            //     color: #ddd;
+            // }
+            // &:hover {
+            //     border-color: $yellow-F4;
+            //     background-color: $yellow-F4;
+            //     svg {
+            //         color: $white;
+            //     }
+            // }
+            input[type="date"] {
+                color: #ddd;
+                font-size: 15px;
+                text-align: end;
+                padding-inline-start: 2px;
+                display: block;
+                &::before {
+                    color: $gray-200;
+                    content: attr(placeholder) !important;
+                    margin-inline-end: 4px;
+                    font-size: 14px;
+                    color: $yellow-F0;
+                }
+
+                &::-webkit-inner-spin-button,
+                &::-webkit-clear-button {
+                    display: block;
+                }
+                &::-webkit-calendar-picker-indicator {
+                    color: rgba(0, 0, 0, 0);
+                    opacity: 1;
+                    &:hover {
+                        background: transparent;
+                        cursor: pointer;
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        background: url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-32.png) no-repeat;
+                        width: 32px;
+                        height: 32px;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        margin-top: -16px;
+                    }
+                }
+            }
+            .from,
+            .to {
+                // background-color: $white;
+            }
+        }
+        .toDate {
+            position: relative;
+        }
+    }
+}

@@ -1,0 +1,220 @@
+@import '../../../index.scss';
+@import '../../../sass/mixins';
+
+
+
+.login {
+  direction: rtl;
+  width: 100%;
+  min-height: 100vh;
+  // height: 100%;
+  // height: 100vh;
+  background-color: $bg-F4;
+  background-image: url(../../../../public/images/main-bg.jpeg);
+  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $overflow-black5;
+    z-index: 1;
+  }
+  @media (max-width: $sm-media) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  @media (max-width: $xs-media) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .wrapper {
+    z-index: 10;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    // margin-top: 52px;
+    // margin-bottom: 52px;
+    min-width: 460px;
+    // min-height: 460px;
+    box-shadow: $shadow-A01;
+    background-color: $white;
+    @include borderRadius(0.45rem);
+    @media (max-width: $md-media) {
+      min-width: 80%;
+    }
+    @media (max-width: $sm-media) {
+      min-width: 90%;
+    }
+    @media (max-width: $xs-media) {
+      min-width: 100%;
+    }
+    .header {
+      padding: 22px 22px 10px;
+      .logo {
+        padding: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 120px;
+          // width: 100%;
+          // height: 100%;
+          // object-fit: cover;
+        }
+      }
+      .text {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #dadada;
+        margin: 10px 0px 20px;
+        line-height: 0.1em;
+        font-size: 16px;
+        padding-top: 20px;
+
+        span {
+          padding: 0px 10px;
+          background-color: $white;
+          line-height: 0.1em;
+        }
+      }
+    }
+    .content {
+      padding: 21px;
+      .form {
+        .inputBox {
+          display: flex;
+          align-items: center;
+          padding: 0.75rem 1rem;
+          font-size: 1rem;
+          border: 1px solid #cacfe7;
+          color: $secondary;
+          @media (max-width: $xs-media) {
+            padding: 0.75rem;
+            overflow: hidden;
+          }
+          .icon {
+            svg {
+              color: $secondary;
+            }
+          }
+          input {
+            border: none;
+            outline: none;
+            padding-inline-start: 16px;
+            @include transition(0.2s);
+            &::placeholder {
+              color: $blue-light;
+            }
+            @media (max-width: $xs-media) {
+              padding-inline-start: 8px;
+            }
+          }
+          &:first-of-type {
+            border-bottom-color: transparent;
+            @include borderRadius(4px 4px 0px 0px)
+          }
+          &:last-of-type {
+            @include borderRadius(0px 0px 4px 4px);
+          }
+          &:hover {
+            border-color: $primary;
+          }
+        }
+        .rememberBox {
+          margin-top: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 8px;
+          @media (max-width: $sm-media) {
+            flex-direction: column;
+            align-items: start;
+          }
+          .inputBox2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            input {
+              width: 20px;
+              height: 20px;
+              border: 1px solid $primary;
+              outline: none;
+              @include borderRadius(4px);
+              color: #00784B;
+              font-size: 18px;
+              font-weight: 500;
+              cursor: pointer;
+              &:focus,
+              &:hover {
+                box-shadow: $shadow-15;
+              }
+            }
+            label {
+              color: $secondary;
+              cursor: pointer;
+            }
+          }
+        }
+        .loginBtn {
+          margin-top: 1.5rem;
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            background-color: $yellow-F4;
+            color: $white;
+            padding: 8px 16px;
+            @include borderRadius(.25rem);
+            width: 100%;
+            font-size: 18px;
+            opacity: 1;
+            @include transition(0.2s);
+            svg {
+              font-size: 20px;
+            }
+            span {
+
+            }
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+    .footer {
+      padding: 21px;
+      border-top: 1px solid #EEE;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: space-between;
+      display: none;
+      @media (max-width: $sm-media) {
+        flex-direction: column;
+        align-items: start;
+      }
+      .signUp {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+    .link {
+      color: $primary;
+      @include transition(0.2s);
+      &:hover {
+        color: $blue-0c;
+      }
+    }
+  }
+}
+

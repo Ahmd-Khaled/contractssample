@@ -1,0 +1,35 @@
+@import '../../index.scss';
+@import '../../sass/mixins';
+
+.deductions {
+  .container {
+    .head {
+      
+    }
+    .addBtn {
+      margin-top: 32px;
+      margin-bottom: 32px;
+      .link {
+        background-color: $bg-red;
+        color: $white;
+        border: 1px solid $bg-red;
+        @include borderRadius(4px);
+        padding: 8px 20px;
+        font-size: 18px;
+        opacity: 1;
+        @include transition(0.2s);
+        &:hover {
+          opacity: 0.6;
+          // color: $bg-red;
+          // background-color: $white;
+        }
+      }
+    }
+    .table {
+
+    }
+  }
+}
+
+
+

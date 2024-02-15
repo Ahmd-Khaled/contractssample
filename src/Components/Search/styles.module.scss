@@ -1,0 +1,34 @@
+@import '../../index.scss';
+@import '../../sass/mixins';
+
+.search {
+    .container {
+        .head {
+            margin-bottom: 22px;
+            .title {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                background-color: $yellow-F0;
+                color: $white;
+                padding: 0px 16px;
+                @include borderRadius(4px);
+                span {
+                    display: block;
+                    padding: 6px 0px;
+                }
+                .searchWord {
+                    color: $secondary;
+                    font-style: italic;
+                }
+                .searchSec {
+                    color: $gray-6b;
+                    font-weight: bold;
+                }
+            }
+        }
+        .content {
+            height: 60vh;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@import '../../index.scss';
+@import '../../sass/mixins';
+
+
+.contracts {
+  position: relative;
+  .container {
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      .pageTitle {
+        font-size: 22px;
+        color: $blue-0c;
+        font-weight: 600;
+      }
+      .genrBtn {
+        padding: 8px 16px;
+        background-color: $yellow-F0;
+        border: 1px solid $yellow-F0;
+        @include borderRadius(4px);
+        color: $white;
+        font-size: 18px;
+        letter-spacing: 0.7px;
+        opacity: 1;
+        @include transition(0.2s);
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+    }
+  }
+  
+  
+  
+}

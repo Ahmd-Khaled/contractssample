@@ -1,0 +1,53 @@
+@import '../../../index.scss';
+@import '../../../sass/mixins';
+
+.addDeduction {
+    .container {
+        .head {}
+
+        .content {
+            .addForm {
+                margin-top: 16px;
+                box-shadow: $shadow-17;
+                @include borderRadius(8px);
+                padding: 32px;
+                width: 90%;
+                @media (max-width: $lg-media) {
+                    width: 100%;
+                }
+                // @media (max-width: $lg-media) {
+                //     width: 90%;
+                // }
+                // @media (max-width: $sm-media) {
+                //     width: 100%;
+                // }
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                @media (max-width: $lg-media) {
+                    grid-template-columns: 1fr;
+                }
+                .addButton {
+                    width: 100%;
+                }
+                .submitBtn {
+                    font-size: 18px;
+                    margin-top: 16px;
+                    padding: 8px 16px;
+                    color: $white;
+                    background-color: $bg-red;
+                    border: 1px solid $bg-red;
+                    @include borderRadius(4px);
+                    @include transition(0.2s);
+                    opacity: 1;
+                    @media (max-width: $sm-media) {
+                        width: 100%;
+                    }
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+}

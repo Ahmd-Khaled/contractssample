@@ -1,0 +1,79 @@
+@import '../../../index.scss';
+@import '../../../sass/mixins';
+
+
+.inputBox,
+.inputBoxFirst,
+.inputBoxLast {
+  margin-bottom: 16px;
+
+  font-size: 1rem;
+  // border: 1px solid transparent;
+  color: $secondary;
+
+  &:hover {
+    border-color: $primary;
+  }
+  .label {
+    color: $gray-6b;
+    font-size: 16px;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .inputContent {
+    border: 1px solid $blue-light1;
+    @include borderRadius(6px);
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: $white;
+    &:hover {
+      box-shadow: $shadow-15;
+    }
+    @media (max-width: $xs-media) {
+      padding: 0.75rem;
+    }
+    .icon {
+      svg {
+        font-size: 18px;
+        color: $blue-light;
+      }
+    }
+    input {
+      width: 100%;
+      border: none;
+      outline: none;
+      padding-inline-start: 16px;
+      background-color: $white;
+      &:focus {
+        background-color: $white;
+      }
+      @include transition(0.2s);
+      &::placeholder {
+        color: $blue-light;
+      }
+      @media (max-width: $xs-media) {
+        padding-inline-start: 8px;
+      }
+    }
+  }
+  .errorMsg {
+    margin-top: 4px;
+    color: $danger;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-inline-start: 0.75rem;
+    padding-bottom: 4px;
+  }
+}
+.inputBox {
+  border-color: $blue-light1 $blue-light1 transparent $blue-light1;
+}
+.inputBoxFirst {
+  @include borderRadius(4px 4px 0px 0px);
+  border-color: $blue-light1 $blue-light1 transparent $blue-light1;
+}
+.inputBoxLast {
+  @include borderRadius(0px 0px 4px 4px);
+  border-color: $blue-light1;
+}

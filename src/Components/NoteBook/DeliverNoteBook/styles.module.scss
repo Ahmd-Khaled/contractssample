@@ -1,0 +1,133 @@
+@import '../../../index.scss';
+@import '../../../sass/mixins';
+
+
+.deliverNoteBook {
+  // padding: 32px;
+  // background: url(../../../../public//images/table-bg.jpg) center / cover;
+  // @include borderRadius(0.8rem);
+  .container {
+    .head {
+      
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      @media (max-width: $lg-media) {
+        flex-direction: column;
+        gap: 32px;
+      }
+      .title {
+        color: #3b4781;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .notebooksList {
+        flex: 1;
+      }
+      .superList {
+        flex: 1;
+      }
+    }
+    .assignBox {
+      margin-top: 32px;
+      min-width: 250px;
+      width: 50%;
+      @include borderRadius(8px);
+      overflow: hidden;
+      box-shadow: $shadow-17;
+      @media (max-width: $lg-media) {
+        width: 80%;
+      }
+      @media (max-width: $md-media) {
+        width: 90%;
+      }
+      @media (max-width: $sm-media) {
+        width: 100%;
+      }
+      .head {
+        padding: 16px;
+        border-bottom: 1px solid $gray-100;
+        background-color: #0000000b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .title {
+          font-size: 20px;
+          font-weight: 600;
+          color: $blue-0c;
+        }
+      }
+      .assignedSuper {
+        padding: 16px;
+        .superName {
+          text-transform: capitalize;
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 16px;
+          color: $bg-green;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          .supTtl {
+            color: $primary;
+            border-bottom: 2px solid $primary;
+            width: fit-content;
+          }
+        }
+        .assignedNotebooksList {
+          .noteTtl {
+            text-transform: capitalize;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: $primary;
+            border-bottom: 2px solid $primary;
+            width: fit-content;
+          }
+          .item {
+            background-color: $gray-100;
+            margin-bottom: 3px;
+            display: flex;
+            @include borderRadius(4px);
+            overflow: hidden;
+            &:nth-child(even) {
+              background-color: $gray-50;
+            }
+            .num {
+              padding: 8px;
+              width: 36px;
+              display: block;
+              border-inline-end: 4px solid $white;
+              background-color: $bg-green;
+              color: $white;
+              font-weight: 600;
+              text-align: center;
+            }
+            .name {
+              display: block;
+              padding: 8px;
+
+            }
+          }
+        }
+        .assBtnBox {
+          margin-top: 16px;
+          margin-bottom: 16px;
+          .assBtn {
+            background-color: $yellow-F0;
+            color: $white;
+            padding: 6px 12px;
+            width: fit-content;
+            @include borderRadius(4px);
+            border: 1px solid $yellow-F0;
+          }
+        }
+      }
+    }
+    
+
+  }
+}

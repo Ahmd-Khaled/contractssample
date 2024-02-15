@@ -1,0 +1,141 @@
+@import '../../index.scss';
+@import '../../sass/mixins';
+
+.userOperations {
+  .container {
+    .head {
+        
+    }
+    .userDetails {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+      .text {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        span {
+          display: block;
+        }
+        .title {
+          color: $yellow-F4;
+          font-weight: 600;
+          font-size: 18px;
+        }
+        .value {
+          color: $secondary;
+        }
+      }
+    }
+    .content {
+      .accountHead {
+          // min-height: 56px;
+          border-bottom: 2px solid $primary;
+          .showTabsIcon {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            cursor: pointer;
+            display: none;
+            @media (max-width: $md-media) {
+              display: flex;
+            }
+            &:hover {
+              color: $primary;
+              h3,
+              svg {
+                color: $primary;
+              }
+            }
+            h3 {
+              font-size: 18px;
+              font-weight: 700;
+              color: $gray-700;
+            }
+            button {
+              svg {
+                font-size: 24px;
+                color: $gray-700;
+                @include transition(0.2s);
+              }
+              &:hover {
+                svg {
+                  color: $primary;
+                }
+              }
+            }
+          }
+          .tabs,
+          .tabsHidden {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            .tab,
+            .tabActive {
+              padding: 8px 24px;
+              @include borderRadius(4px 4px 0px 0px);
+              cursor: pointer;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: normal;
+              &:hover {
+                background-color: $primary;
+                color: $white;
+              }
+              @media (max-width: $lg-media) {
+                padding: 8px 16px;
+              }
+            }
+            .tabActive {
+              background-color: $primary;
+              color: $white;
+            }
+            @media (max-width: $md-media) {
+              flex-direction: column;
+              align-items: flex-start;
+              // width: 100%;
+              .tabs,
+              .tabsHidden {
+                .tab,
+                .tabActive {
+                  width: 100%;
+                }
+              }
+            }
+          }
+          .tabsHidden {
+            @media (max-width: $md-media) {
+              display: none;
+            }
+          }
+      }
+      .accountBody {
+      min-height: 50vh;
+      // @include borderRadius(0px 0px 2px 2px);
+      border-right: 1px solid $gray-100;
+      border-bottom: 1px solid $gray-100;
+      border-left: 1px solid $gray-100;
+      padding: 40px 16px;
+      @media (max-width: $xs-media) {
+          padding: 40px 0px;
+      }
+      }
+    }
+  }
+  .notFound {
+    width: 100%;
+    background-color: $bg-red;
+    color: $white;
+    padding: 8px;
+    @include borderRadius(4px);
+  }
+  .operation {
+
+  }
+}
+
+
+
+

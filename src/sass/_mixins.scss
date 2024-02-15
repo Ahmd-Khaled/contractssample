@@ -1,0 +1,89 @@
+@mixin circle($dimension) {
+  width: $dimension;
+  height: $dimension;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+@mixin borderRadius($dim) {
+  border-radius: $dim;
+  -webkit-border-radius: $dim;
+  -moz-border-radius: $dim;
+  -ms-border-radius: $dim;
+  -o-border-radius: $dim;
+}
+
+@mixin borderCustomRadius($border, $value) {
+  $border: $value;
+}
+
+@mixin transition($sec) {
+  transition: all $sec ease-in-out;
+  -webkit-transition: all $sec ease-in-out;
+  -moz-transition: all $sec ease-in-out;
+  -ms-transition: all $sec ease-in-out;
+  -o-transition: all $sec ease-in-out;
+}
+
+@mixin transCustom($trans) {
+  transition: $trans;
+  -webkit-transition: $trans;
+  -moz-transition: $trans;
+  -ms-transition: $trans;
+  -o-transition: $trans;
+}
+
+@mixin transform($option) {
+  transform: $option;
+  -webkit-transform: $option;
+  -moz-transform: $option;
+  -ms-transform: $option;
+  -o-transform: $option;
+}
+
+@mixin centerElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin animate($val) {
+  animation: $val;
+  -webkit-animation: $val;
+}
+
+@mixin breakpoints($point) {
+  @if $point == xxs {
+      @media (max-width: 370px) {
+          @content;
+      }
+  }
+  @else if $point == xs {
+      @media (max-width: 450px) {
+          @content;
+      }
+  } @else if $point == sm {
+      @media (max-width: 576px) {
+          @content;
+      }
+  } @else if $point == md {
+      @media (max-width: 768px) {
+          @content;
+      }
+  } @else if $point == lg {
+      @media (max-width: 992px) {
+          @content;
+      }
+  } @else if $point == xl {
+      @media (max-width: 1200px) {
+          @content;
+      }
+  } @else if $point == xxl {
+      @media (max-width: 1400px) {
+          @content;
+      }
+  }
+}

@@ -1,0 +1,97 @@
+import { useTranslation } from "react-i18next";
+import styles from "./styles.module.scss";
+import { RxReload } from "react-icons/rx";
+
+
+
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ReferenceLine,
+  ResponsiveContainer,
+  Label,
+} from 'recharts';
+
+
+const data = [
+  {
+    name: 'Sat',
+    "Last Week": 2000,
+    "Current Week": 3200,
+    amt: 2400,
+  },
+  {
+    name: 'Sun',
+    "Last Week": 4500,
+    "Current Week": 4800,
+    amt: 2210,
+  },
+  {
+    name: 'Mon',
+    "Last Week": 5600,
+    "Current Week": 7500,
+    amt: 2290,
+  },
+  {
+    name: 'Tue',
+    "Last Week": 7000,
+    "Current Week": 7600,
+    amt: 2000,
+  },
+  {
+    name: 'Wed',
+    "Last Week": 5000,
+    "Current Week": 6000,
+    amt: 2181,
+  },
+  {
+    name: 'Thu',
+    "Last Week": 6000,
+    "Current Week": 6600,
+    amt: 2500,
+  },
+  {
+    name: 'Fri',
+    "Last Week": 8000,
+    "Current Week": 8600,
+    amt: 2100,
+  },
+];
+
+
+const Revenue = () => {
+  const { t, i18n } = useTranslation();
+
+  console.log("Revenue direction: ", i18n.dir())
+
+  return (
+    <div className={styles.revenue}>
+      <div className={styles.head}>
+        <h4 className={styles.title}>{t("dashboard-home-text1")}</h4>
+        <RxReload />
+      </div>
+      <div className={styles.content} style={{direction: i18n.dir()}}>
+        <ResponsiveContainer height='100%' width='100%' direction={i18n.dir()} style={{direction: i18n.dir()}} >
+          <LineChart data={data}>
+            <CartesianGrid direction={i18n.dir()}  strokeDasharray="3 3" />
+            <XAxis direction={i18n.dir()} dataKey="name" />
+            <YAxis direction={i18n.dir()} />
+              {/* <Label angle={-90} value='custom label' position='insideLeft' style={{textAnchor: 'middle'}} /> */}
+            {/* </YAxis> */}
+            <Tooltip />
+            <Legend />
+            <Line type="bump" dataKey="Current Week" stroke="#E7455E" activeDot={{ r: 8 }} />
+            <Line type="bump" dataKey="Last Week" stroke="#C9C1C3" />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+    </div>
+  )
+}
+
+export default Revenue;

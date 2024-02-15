@@ -1,0 +1,76 @@
+@import '../../../index.scss';
+@import '../../../sass/mixins';
+
+
+.inputBox {
+  position: relative;
+  flex: 0 0 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+  @media (max-width: $md-media) {
+    flex: 0 0 80%;
+  }
+  @media (max-width: $sm-media) {
+    flex: 0 0 100%;
+  }
+  .label {
+    font-weight: 500;
+    font-size: 14px;
+    color: $gray-400;
+  }
+  .input,
+  .inputEmpty {
+    height: 50px;
+    margin-bottom: 8px;
+    border: 1px solid $primary;
+    @include borderRadius(4px);
+    padding: 8px 16px;
+    width: 100%;
+    outline: none;
+    @include transition(0.2s);
+    background-color: $gray-100;
+    background-color: $white;
+    font-size: 18px;
+    color: $gray-400;
+    &:focus {
+      box-shadow: $shadow-15;
+    }
+    option {
+      font-size: 18px;
+      color: $gray-700;
+    }
+  }
+  .inputEmpty {
+    border-color: $danger;
+  }
+  .errorMsg {
+    font-weight: 400;
+    font-size: 12px;
+    color: $danger;
+    margin-top: -6px;
+  }
+  .customLabel,
+  .customLabelAr {
+    font-weight: 500;
+    font-size: 14px;
+    color: $gray-700;
+    position: absolute;
+    top: -8px;
+    background-color: $white;
+    // background-color: $gray-100;
+    // border-left: 1px solid $primary;
+    // border-right: 1px solid $primary;
+    // @include borderRadius(6px);
+    padding-left: 6px;
+    padding-right: 6px;
+    height: 18px;
+  }
+  .customLabel {
+    left: 16px;
+  }
+  .customLabelAr {
+    right: 16px;
+  }
+}

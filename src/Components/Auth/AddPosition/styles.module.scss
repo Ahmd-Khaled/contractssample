@@ -1,0 +1,155 @@
+@import '../../../index.scss';
+@import '../../../sass/mixins';
+
+.addPosition {
+  .container {
+    .head {
+      
+    }
+    .content {
+      .form {
+        width: 60%;
+        @media (max-width: $xl-media) {
+          width: 70%;
+        }
+        @media (max-width: $lg-media) {
+          width: 80%;
+        }
+        @media (max-width: $md-media) {
+          width: 90%;
+        }
+        @media (max-width: $sm-media) {
+          width: 100%;
+        }
+        .rememberBox {
+          margin-top: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 8px;
+          @media (max-width: $sm-media) {
+            flex-direction: column;
+            align-items: start;
+          }
+          .inputBox2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            input {
+              width: 20px;
+              height: 20px;
+              border: 1px solid $primary;
+              outline: none;
+              @include borderRadius(4px);
+              color: #00784B;
+              font-size: 18px;
+              font-weight: 500;
+              cursor: pointer;
+              &:focus,
+              &:hover {
+                box-shadow: $shadow-15;
+              }
+            }
+            label {
+              color: $secondary;
+              cursor: pointer;
+            }
+          }
+        }
+        .loginBtn {
+          margin-top: 1.5rem;
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            background-color: $bg-green;
+            color: $white;
+            padding: 8px 16px;
+            @include borderRadius(.25rem);
+            width: 100%;
+            font-size: 18px;
+            opacity: 1;
+            @include transition(0.2s);
+            svg {
+              font-size: 20px;
+            }
+            span {
+      
+            }
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+        .selections {
+          display: flex;
+          // align-items: center;
+          gap: 16px;
+          margin-bottom: 16px;
+          @media (max-width: $sm-media) {
+            flex-direction: column;
+          }
+        }
+        .inputWrapper,
+        .inputWrapper2 {
+          // flex: 0 0 45%;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          // margin-bottom: 16px;
+          @media (max-width: $sm-media) {
+            width: 100%;
+          }
+          label {
+            font-size: 16px;
+            color: $gray-300;
+            padding-inline-start: 4px;
+          }
+        }
+        .inputWrapper2 {
+          width: 50%;
+          @media (max-width: $sm-media) {
+            width: 100%;
+          }
+        }
+        .terms {
+          margin-top: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 8px;
+          @media (max-width: $sm-media) {
+            flex-direction: column;
+            align-items: start;
+          }
+          .inputBox2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            input {
+              width: 20px;
+              height: 20px;
+              border: 1px solid $primary;
+              outline: none;
+              @include borderRadius(4px);
+              color: #00784B;
+              font-size: 18px;
+              font-weight: 500;
+              cursor: pointer;
+              &:focus,
+              &:hover {
+                box-shadow: $shadow-15;
+              }
+            }
+            label {
+              color: $secondary;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

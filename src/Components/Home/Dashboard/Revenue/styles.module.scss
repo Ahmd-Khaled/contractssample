@@ -1,0 +1,40 @@
+@import '../../../../index.scss';
+@import '../../../../sass/mixins';
+
+.revenue {
+  .head {
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    .title {
+      font-weight: 500;
+      letter-spacing: .05rem;
+      font-size: 1.12rem;
+      color: $gray-46;
+    }
+    svg {
+      color: $gray-46;
+      cursor: pointer;
+      // font-size: 18px;
+    }
+  }
+  .content {
+    min-width: 420px;
+    height: 310px;
+    @media (max-width: $sm-media) {
+      min-width: 300px;
+      // max-width: 350px;
+      // height: 100%;
+      .recharts-layer {
+
+      }
+    }
+    @media (max-width: $xs-media) {
+      min-width: 220px;
+      min-height: 320px;
+    }
+  }
+}
+

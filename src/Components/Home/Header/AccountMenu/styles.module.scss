@@ -1,0 +1,50 @@
+@import '../../../../index.scss';
+@import '../../../../sass/mixins';
+
+.accountMenu {
+  min-width: 170px;
+  z-index: 1000;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  box-shadow: $shadow-A01;
+  @include borderRadius(4px);
+  // left: 100px;
+  @media (max-width: $xs-media) {
+    left: -120px;
+  }
+
+  .profileList {
+    display: flex;
+    flex-direction: column;
+    .profileItem {
+      @include transition(0.3s);
+      a,
+      button {
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        svg {
+          font-size: 18px;
+        }
+        span {
+
+        }
+      }
+      &:hover {
+        background-color: $blue-light1;
+      }
+      &:last-of-type {
+        border-top: 1px solid $gray-100;
+        a,
+        button {
+          padding: 16px;
+        }
+      }
+    }
+  }
+}
+

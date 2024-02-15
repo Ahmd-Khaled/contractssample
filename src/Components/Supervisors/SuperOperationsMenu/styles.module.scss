@@ -1,0 +1,44 @@
+@import '../../../index.scss';
+@import '../../../sass/mixins';
+
+
+.operationsMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 110px;
+    // height: 100%;
+    padding: 4px;
+    border: 1px solid $gray-100;
+    box-shadow: $shadow-15;
+    z-index: 1000;
+    @include borderRadius(4px);
+    .list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2px;
+        .item {
+            text-align: center;
+            width: 100%;
+            padding: 4px 8px;
+            background-color: $blue-0c;
+            border: 1px solid transparent;
+            @include borderRadius(4px);
+            @include transition(0.2s);
+            &:hover {
+                background-color: $white;
+                color: $blue-0c;
+                border-color: $blue-0c;
+            }
+            .link {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+

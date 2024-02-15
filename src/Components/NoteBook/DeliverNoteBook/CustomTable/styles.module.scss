@@ -1,0 +1,152 @@
+@import '../../../../index.scss';
+@import '../../../../sass/mixins';
+
+.table {
+  width: 82vw;
+  width: 72vw;
+  width: 100%;
+  height: 90vh;
+  background-color: #FFF5;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 0.4rem 0.8rem #0005;
+  @include borderRadius(0.8rem);
+  overflow: hidden;
+  .head {
+    width: 100%;
+    height: 12%;
+    background-color: #FFF4;
+    padding: 0.8rem 1rem;
+    padding: 0.8rem 2rem;
+    // text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    h1 {
+      color: $primary;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .inputGroup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35%;
+      height: 100%;
+      background-color: #FFF5;
+      padding: 0 0.8rem;
+      @include borderRadius(2rem);
+      @include transition(0.2s);
+      &:hover {
+        width: 45%;
+        background-color: #FFF8;
+        box-shadow: 0 0.1rem 0.4rem #0002;
+      }
+      input {
+        width: 100%;
+        padding: 0 0.5rem 0 0.3rem;
+        background-color: transparent;
+        border: none;
+        outline: none;
+      }
+      svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        color: $gray-46;
+        cursor: pointer;
+        @include transition(0.2s);
+        &:hover {
+          color: $yellow-F4;
+        }
+      }
+    }
+  }
+  .body {
+    width: 95%;
+    height: calc(89% - 0.8rem - 0.8rem);
+    height: calc(87% - 0.8rem - 0.8rem);
+    background-color: #FFFB;
+    margin: 0.8rem auto;
+    @include borderRadius(0.6rem);
+    overflow: auto;
+    table {
+      width: 100%;
+      thead {
+        tr {
+          th {
+            padding: 1rem;
+            border-collapse: collapse;
+            position: sticky;
+            top: 0;
+            right: 0;
+            background-color: #d5d1defe;
+          }
+        }
+      }
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: #0000000b;
+          }
+          &:hover {
+            background-color: #FFF6;
+          }
+          td {
+            text-align: center;
+            padding: 1rem;
+            vertical-align: middle;
+            @media (max-width: $lg-media) {
+              min-width: 12.1rem;
+            }
+            .image {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              // flex-direction: column;
+              // align-items: center;
+              img {
+                width: 36px;
+                height: 36px;
+                margin-inline-end: 8px;
+                @include borderRadius(50%);
+              }
+            }
+            .status {
+              text-align: center;
+              padding: 0.4rem 0.1rem;
+              @include borderRadius(2rem);
+
+              &.delivered {
+                background-color: #86e49d;
+                color: #006b21;
+              }
+              &.cancelled {
+                background-color: #D893A3;
+                color: #B30021;
+              }
+              &.pending {
+                background-color: #ebc474;
+              }
+              &.shipped {
+                background-color: #6fcaea;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .body::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  .body::-webkit-scrollbar-thumb {
+    @include borderRadius(0.5rem);
+    background-color: #0004;
+    visibility: hidden;
+  }
+  .body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+  }
+}
+

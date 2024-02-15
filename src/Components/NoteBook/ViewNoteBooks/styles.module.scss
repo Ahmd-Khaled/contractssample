@@ -1,0 +1,95 @@
+@import '../../../index.scss';
+@import '../../../sass/mixins';
+
+
+.viewNoteBooks {
+  // background-color: #777;
+  // notebooks-bg.png
+  // padding: 32px;
+  // background: url(../../../../public//images/notebooks-bg.png) center / cover;
+  .container {
+    .head {
+
+    }
+    .charts {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      @media (max-width: $lg-media) {
+        flex-direction: column;
+      }
+      .stats {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        @media (max-width: $sm-media) {
+          flex-direction: column;
+          width: 100%;
+          align-items: flex-start;
+        }
+        .assigned,
+        .notAssigned,
+        .cancelled {
+          flex: 1;
+          min-width: 180px;
+          padding: 16px;
+          // min-height: 100px;
+          @include borderRadius(8px);
+          box-shadow: $shadow-A04;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 4px;
+          height: 100%;
+          margin: auto 0px;
+          @media (max-width: $sm-media) {
+            width: 80%;
+
+          }
+          .details {
+            .title {
+              color: $white;
+              font-weight: 600;
+              line-height: 1.2;
+              margin-bottom: 8px;
+              font-size: 16px;
+            }
+            .value {
+              font-size: 24px;
+              margin-bottom: 8px;
+              font-weight: 600;
+              line-height: 1.2;
+              color: $gray-46;
+              padding-inline-start: 4px;
+            }
+          }
+          .icon {
+            svg {
+              font-size: 40px;
+              color: $white;
+            }
+          }
+        }
+        .assigned {
+          background-color: $bg-green;
+        }
+        .notAssigned {
+          background-color: $yellow-F0;
+          background-color: $bg-red;
+        }
+        .cancelled {
+          background-color: $bg-red;
+        }
+      }
+      .chart {
+        min-width: 170px;
+        height: 170px;
+        margin: 0px auto;
+      }
+
+    }
+  }
+}
+
+

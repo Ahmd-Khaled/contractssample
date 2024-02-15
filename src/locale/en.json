@@ -1,0 +1,46 @@
+{
+  "meta-title-login": "Contracts Dashboard | Login",
+  "meta-title-register": "Contracts Dashboard | Register",
+  "login": "Login",
+  "login-text1": "Login with MBN Contracts",
+  "login-text2": "Write your E-mail*",
+  "login-text3": "Password*",
+  "login-text4": "Remember Me",
+  "login-text5": "Forgot Password?",
+  "login-text6": "Recover password",
+
+  "dashboard-home-text1": "Revenue",
+  "dashboard-home-text2": "Rate",
+  "dashboard-home-text3": "Deals",
+  "dashboard-home-text4": "Order Value",
+  "dashboard-home-text5": "Calls",
+  "dashboard-home-text6": "",
+  "dashboard-home-text7": "",
+  "dashboard-home-text8": "",
+  "dashboard-home-text9": "",
+  "dashboard-home-text10": "",
+
+  "sidebar-text1": "Dashboard",
+  "sidebar-text2": "Contracts",
+  "sidebar-text3": "Expenses",
+  "sidebar-text4": "Statistics",
+  "sidebar-text5": "Users",
+  "sidebar-text6": "Inventory",
+  "sidebar-text7": "Orders",
+  "sidebar-text8": "Billings",
+  "sidebar-text9": "Settings",
+  "sidebar-text10": "Help",
+
+  "table-download": "Download",
+  "table-page": "Page",
+  "table-of": "of ",
+  "table-goToPage": "| Go to page:",
+  "table-show": "Show  ",
+  "table-search": "Search...",
+  "table-searchNotFound": "Search word not found!",
+
+
+  "footer-text1": "Copyright © 2024",
+  "footer-text2": "MBN Contracts",
+  "footer-text3": "Hand-crafted & Made with Love"
+}

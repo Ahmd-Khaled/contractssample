@@ -1,0 +1,16 @@
+@import '../../../index.scss';
+@import '../../../sass/mixins';
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  .starYellow,
+  .starGray {
+    font-size: 14px;
+    fill: $warning;
+  }
+  .starGray {
+    fill: $gray-200;
+  }
+}

@@ -1,0 +1,58 @@
+@import '../../../index.scss';
+@import '../../../sass/mixins';
+
+.language {
+  position: relative;
+  // margin: auto 0px;
+  .selectedLang {
+    cursor: pointer;
+    img {
+      width: 32px;
+      @include borderRadius(4px);
+      @media (max-width: $xs-media) {
+        width: 24px;
+      }
+    }
+  }
+  .langMenu {
+    width: 120px;
+    z-index: 1000;
+    position: absolute;
+    top: 32px;
+    // left: -16px;
+    // right: -16px;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    box-shadow: $shadow-A01;
+    @include borderRadius(4px);
+    // width: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    li {
+      cursor: pointer;
+      text-align: center;
+      padding: 8px 16px;
+      width: 100%;
+      font-size: 18px;
+      @include transition(0.3s);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      &:first-of-type {
+        border-bottom: 1px solid $gray-100;
+      }
+      &:hover {
+        background-color: $blue-light;
+        color: $white;
+      }
+      img {
+        width: 28px;
+      }
+      span {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+}
